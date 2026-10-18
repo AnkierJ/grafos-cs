@@ -1,0 +1,12 @@
+# Dependências (faixas compatíveis). Versões exatas testadas: requirements-lock.txt
+networkx>=3.2
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+seaborn>=0.13
+nxviz>=0.7
+kagglehub>=0.3
+jupyterlab>=4.0
+ipykernel>=6.29
+nbconvert>=7.16
