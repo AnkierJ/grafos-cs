@@ -4,13 +4,10 @@ Projeto da Unidade 01 · Algoritmos e Estruturas de Dados II · Grafos
 
 ## Integrantes
 
-Ankier José <!-- confirme o nome completo exatamente como consta na matrícula -->
+Ankier José Barreira Lima (20230020941)
 
 ## Vídeo
-
-**https://youtu.be/COLE-O-LINK-AQUI** (até 15 min no total · não listado, nunca privado)
-
-> ⚠️ **PREENCHER antes de entregar.** Sem o link explícito nesta seção, a nota do projeto é zero. Abra o link em uma janela anônima para conferir.
+https://youtu.be/haW7CYK9F04
 
 ## Problema e pergunta
 
@@ -130,11 +127,26 @@ jupyter nbconvert --to notebook --execute analise.ipynb --inplace   # executa tu
 
 ## Resultados
 
-> ⚠️ **PREENCHER depois de rodar com os dados reais.** O notebook calcula tudo e grava as figuras e `resultados/resumo.md`. Cole o resumo abaixo e escreva a resposta à pergunta central. Não deixe números de exemplo: o que está aqui deve ser o que o seu notebook imprimiu.
-
-### Resumo gerado pelo notebook
-
-<!-- cole aqui o conteúdo de resultados/resumo.md -->
+Dados. 26,781 partidas válidas entre 1,539 times; a rede de trabalho (≥ 15 partidas) tem 531 times e 11,314 arestas, com densidade 0.040.
+Estrutura (S3/S4). GCC com 100% dos times; caminho médio 2.43 (aleatório: 2.05), clustering 0.52 (aleatório: 0.063), σ = 6.9. Maior SCC com 99% dos times.
+Q1 (hierarquia). A medida mais alinhada ao ranking HLTV é eig (ρ = -0.82, forte); autovetor: ρ = -0.82; nº de adversários: ρ = -0.58.
+Q1b (núcleo, S5). Degenerescência k = 34 com 73 times no núcleo interno; ρ(core, ranking) = -0.66, ρ(core, nº de adversários) = 0.92. O núcleo acompanha mais o calendário do que a força.
+Q2 (freguesia). 1 de 3,038 pares passam no teste (FDR 10%) de vencer acima do esperado pelo ranking; o mais marcante: Chiefs sobre Legacy (25/25).
+Intransitividade. 14.8% dos triângulos de dominância são cíclicos (aleatório: 24.9%): há hierarquia, mas imperfeita.
+Q2b (previsão, teste n = 5,418). Ranking sozinho: 65.3% de acerto (logloss 0.634); ranking + rede: 64.6% (logloss 0.625). A rede melhora ligeiramente a qualidade das probabilidades (logloss 0.634 → 0.625), mas a acurácia é estatisticamente equivalente (Δ = -0.7 p.p., IC95% ≈ ±1.3). Sozinha, a melhor medida de rede (Razão de vitórias (S2): 61.0%) fica abaixo do ranking.
+Q3 (vetos). Correlação entre taxa de ban e desempenho relativo no mapa: ρ = -0.40 (agrupado) e -0.45 (mediana dentro dos times; 82% negativos). Os times tendem a banir os mapas em que são relativamente mais fracos. Na projeção, o peso bruto acompanha o volume (ρ = 0.98) e o Jaccard o neutraliza (ρ = -0.12).
+Q4 (BFS, S3). 99% dos times alcançam Natus Vincere por cadeias de vitórias; distância média 2.57, máxima 5. A DFS acha caminhos ≈ 92.4× mais longos que o ótimo da BFS.
+Q5 (resiliência). Remover 10% dos times não fragmenta a rede (100% dos restantes seguem no componente gigante), mas alonga os caminhos: média de 2.43 → 2.99 no pior ataque ('maior betweenness'), contra 2.48 na remoção aleatória; a eficiência global cai de 0.451 para 0.377.
+Dados. 26,781 partidas válidas entre 1,539 times; a rede de trabalho (≥ 15 partidas) tem 531 times e 11,314 arestas, com densidade 0.040.
+Estrutura (S3/S4). GCC com 100% dos times; caminho médio 2.43 (aleatório: 2.05), clustering 0.52 (aleatório: 0.063), σ = 6.9. Maior SCC com 99% dos times.
+Q1 (hierarquia). A medida mais alinhada ao ranking HLTV é eig (ρ = -0.82, forte); autovetor: ρ = -0.82; nº de adversários: ρ = -0.58.
+Q1b (núcleo, S5). Degenerescência k = 34 com 73 times no núcleo interno; ρ(core, ranking) = -0.66, ρ(core, nº de adversários) = 0.92. O núcleo acompanha mais o calendário do que a força.
+Q2 (freguesia). 1 de 3,038 pares passam no teste (FDR 10%) de vencer acima do esperado pelo ranking; o mais marcante: Chiefs sobre Legacy (25/25).
+Intransitividade. 14.8% dos triângulos de dominância são cíclicos (aleatório: 25.1%): há hierarquia, mas imperfeita.
+Q2b (previsão, teste n = 5,418). Ranking sozinho: 65.3% de acerto (logloss 0.634); ranking + rede: 64.6% (logloss 0.625). A rede melhora ligeiramente a qualidade das probabilidades (logloss 0.634 → 0.625), mas a acurácia é estatisticamente equivalente (Δ = -0.7 p.p., IC95% ≈ ±1.3). Sozinha, a melhor medida de rede (Razão de vitórias (S2): 61.0%) fica abaixo do ranking.
+Q3 (vetos). Correlação entre taxa de ban e desempenho relativo no mapa: ρ = -0.40 (agrupado) e -0.45 (mediana dentro dos times; 82% negativos). Os times tendem a banir os mapas em que são relativamente mais fracos. Na projeção, o peso bruto acompanha o volume (ρ = 0.98) e o Jaccard o neutraliza (ρ = -0.12).
+Q4 (BFS, S3). 99% dos times alcançam Natus Vincere por cadeias de vitórias; distância média 2.57, máxima 5. A DFS acha caminhos ≈ 96.0× mais longos que o ótimo da BFS.
+Q5 (resiliência). Remover 10% dos times não fragmenta a rede (100% dos restantes seguem no componente gigante), mas alonga os caminhos: média de 2.43 → 2.99 no pior ataque ('maior betweenness'), contra 2.47 na remoção aleatória; a eficiência global cai de 0.451 para 0.377.
 
 ### Figuras
 
@@ -150,8 +162,7 @@ jupyter nbconvert --to notebook --execute analise.ipynb --inplace   # executa tu
 | Q5: resiliência (§11) | `figuras/11_resiliencia.png` |
 
 ### Resposta à pergunta central
-
-<!-- 1 ou 2 parágrafos, com os seus números: as centralidades acompanham o ranking? Existem freguesias que o ranking não prevê? A rede melhora a previsão fora da amostra? O núcleo é "elite" ou "calendário"? Os vetos seguem o desempenho por mapa? -->
+A rede dos confrontos confirma a hierarquia que o ranking já descreve e revela estrutura nos vetos e na topologia, mas não melhora a previsão de resultados de forma demonstrável.
 
 ## Limitações e próximos passos
 
